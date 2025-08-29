@@ -28,7 +28,7 @@ fun ResponsiveTitleText(
 ){
 
     val fontSize = animateFloatAsState(
-        targetValue = if (deviceType == DeviceType.MOBILE) 32f else 48f,
+        targetValue = if (deviceType == DeviceType.MOBILE) 28f else 32f,
         animationSpec = tween(durationMillis = 500),
         label = ""
     )
@@ -51,7 +51,8 @@ fun ResponsiveBodyText(
     bodyText : String = "",
     font : FontFamily = UbuntuMedium(),
     deviceType: DeviceType,
-    textColor : Color = TextPrimary
+    textColor : Color = TextPrimary,
+    maxLines : Int = 2
 ){
 
     val targetValue = when(deviceType){
@@ -72,7 +73,8 @@ fun ResponsiveBodyText(
         text = bodyText,
         fontFamily = font,
         fontSize = fontSize.value.sp,
-        color = textColor
+        color = textColor,
+        maxLines = maxLines
     )
 
 }

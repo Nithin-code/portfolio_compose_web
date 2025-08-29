@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.nithin.portfolio.components.AboutMeSection
 import com.nithin.portfolio.components.HeaderSection
+import com.nithin.portfolio.components.ProjectSection
 import com.nithin.portfolio.utils.DeviceType
 import com.nithin.portfolio.utils.SurfaceBackGround
 import com.nithin.portfolio.utils.getArrangementSpace
@@ -46,6 +47,15 @@ fun ResponsiveLayout(
                 title = "About Me"
             )
         }
+
+        item {
+            ProjectSection(
+                title = "Projects",
+                deviceType = deviceType
+            )
+        }
+
+
 
     }
 }
