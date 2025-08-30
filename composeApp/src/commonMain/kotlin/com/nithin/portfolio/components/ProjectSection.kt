@@ -15,6 +15,7 @@ import com.nithin.portfolio.utils.DeviceType
 import com.nithin.portfolio.utils.Divider
 import com.nithin.portfolio.utils.ProjectData
 import com.nithin.portfolio.utils.SurfaceBackGround
+import com.nithin.portfolio.utils.TextType
 import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.down
 
@@ -40,10 +41,11 @@ fun ProjectSection(
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
 
-            ResponsiveTitleText(
+            ResponsiveText(
                 modifier = Modifier,
                 title = title,
-                deviceType = deviceType
+                deviceType = deviceType,
+                textType = TextType.HEADING
             )
 
             Row(
@@ -51,12 +53,12 @@ fun ProjectSection(
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
 
-                val itensSize = ProjectData.entries.size
+                val itemsSize = ProjectData.entries.size
 
                 ProjectData.entries.forEach { projectData ->
 
                     ProjectDetails(
-                        modifier = Modifier.weight(1f/itensSize),
+                        modifier = Modifier.weight(1f/itemsSize),
                         deviceType = deviceType,
                         icon = projectData.icon,
                         projectTitle = projectData.projectName,

@@ -3,6 +3,7 @@ package com.nithin.portfolio.utils
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.ubuntu_medium

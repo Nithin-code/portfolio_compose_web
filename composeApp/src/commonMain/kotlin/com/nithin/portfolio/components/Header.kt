@@ -57,20 +57,21 @@ fun HeaderSection(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
 
-        ResponsiveTitleText(
+        ResponsiveText(
             title = title,
-            deviceType = deviceType
+            deviceType = deviceType,
+            textType = TextType.HEADING
         )
 
 
-        FixedSubTitleText(
-            subTitle = subTitle
+        ResponsiveText(
+            title = subTitle,
+            deviceType = deviceType,
+            textType = TextType.BODY
         )
 
 
-        Row(
-
-        ) {
+        Row {
             CustomButton(
                 onclick = {
                     selectedBtn = it

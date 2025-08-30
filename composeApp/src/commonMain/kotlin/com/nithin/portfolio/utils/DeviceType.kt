@@ -11,13 +11,31 @@ enum class DeviceType {
     DESKTOP
 }
 
-enum class TextType(val size : TextUnit){
-    Mobile_Title(32.sp),
-    WEB_Title(48.sp),
-    BODY_LARGE(18.sp)
+
+enum class TextType{
+    HEADING,
+    BUTTON,
+    BODY
+}
+
+fun getHeadingSize(deviceType: DeviceType) = when(deviceType){
+    DeviceType.MOBILE -> 20.sp
+    DeviceType.TAB -> 24.sp
+    DeviceType.DESKTOP -> 28.sp
 }
 
 
+fun getButtonTextSize(deviceType: DeviceType) = when(deviceType){
+    DeviceType.MOBILE -> 14.sp
+    DeviceType.TAB -> 16.sp
+    DeviceType.DESKTOP -> 18.sp
+}
+
+fun getBodySize(deviceType: DeviceType) = when(deviceType){
+    DeviceType.MOBILE -> 14.sp
+    DeviceType.TAB -> 16.sp
+    DeviceType.DESKTOP -> 18.sp
+}
 
 
 fun Dp.getDeviceType() : DeviceType{

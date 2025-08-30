@@ -16,10 +16,12 @@ enum class ProjectData(
         techUsed = "Kotlin + Compose"
     ),
 
-    Notes_App(
+    NOTES_APP(
         icon = Res.drawable.save_money,
         projectName = "Notes App",
         techUsed = "Kotlin + MVVM"
     )
+
+
 
 }

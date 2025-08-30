@@ -65,6 +65,8 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
+            implementation(project.dependencies.platform("androidx.compose:compose-bom:2025.08.00")) // or a newer version
+
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
