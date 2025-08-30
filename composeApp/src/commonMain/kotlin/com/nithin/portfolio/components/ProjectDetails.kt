@@ -17,6 +17,7 @@ import com.nithin.portfolio.utils.DeviceType
 import com.nithin.portfolio.utils.Divider
 import com.nithin.portfolio.utils.PrimaryAccent
 import com.nithin.portfolio.utils.SurfaceBackGround
+import com.nithin.portfolio.utils.TextType
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import portfolio.composeapp.generated.resources.Res
@@ -49,19 +50,24 @@ fun ProjectDetails(
         ) {
 
             Icon(
-                modifier = Modifier.width(50.dp).height(30.dp),
+                modifier = Modifier
+                    .width(50.dp)
+                    .height(32.dp),
                 painter = painterResource(icon),
                 contentDescription = "project image",
                 tint = PrimaryAccent
             )
 
-            FixedSubTitleText(
-                subTitle = projectTitle,
+            AutoScrollableText(
+                text = projectTitle,
+                deviceType = deviceType,
+                textType = TextType.HEADING
             )
 
-            ResponsiveBodyText(
-                bodyText = projectSubTitle,
-                deviceType = deviceType
+            AutoScrollableText(
+                text = projectSubTitle,
+                deviceType = deviceType,
+                textType = TextType.BODY
             )
 
         }

@@ -23,6 +23,7 @@ import com.nithin.portfolio.utils.Divider
 import com.nithin.portfolio.utils.PrimaryAccent
 import com.nithin.portfolio.utils.SurfaceBackGround
 import com.nithin.portfolio.utils.TextPrimary
+import com.nithin.portfolio.utils.TextType
 import com.nithin.portfolio.utils.UbuntuRegular
 import com.nithin.portfolio.utils.getDeviceTypePadding
 
@@ -64,12 +65,14 @@ fun CustomButton(
             contentAlignment = Alignment.Center
         ){
 
-            Text(
-                text = text,
-                fontSize = 16.sp,
-                color = contentColor.value,
-                fontFamily = UbuntuRegular(),
+            ResponsiveText(
+                title = text,
+                font = UbuntuRegular(),
+                deviceType = deviceType,
+                textColor = contentColor.value,
+                textType = TextType.BUTTON,
             )
+
         }
     }
 

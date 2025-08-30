@@ -4,6 +4,7 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.AnimationVector1D
 import androidx.compose.animation.core.TwoWayConverter
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.animateIntAsState
 import androidx.compose.animation.core.animateValueAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.material3.Text
@@ -15,30 +16,41 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import com.nithin.portfolio.utils.DeviceType
 import com.nithin.portfolio.utils.TextPrimary
+import com.nithin.portfolio.utils.TextType
 import com.nithin.portfolio.utils.UbuntuMedium
 import com.nithin.portfolio.utils.UbuntuRegular
+import com.nithin.portfolio.utils.getBodySize
+import com.nithin.portfolio.utils.getButtonTextSize
+import com.nithin.portfolio.utils.getHeadingSize
 
 @Composable
-fun ResponsiveTitleText(
+fun ResponsiveText(
     modifier: Modifier = Modifier,
     title : String = "",
     font : FontFamily = UbuntuMedium(),
     deviceType: DeviceType,
-    textColor : Color = TextPrimary
+    textColor : Color = TextPrimary,
+    textType: TextType
 ){
 
-    val fontSize = animateFloatAsState(
-        targetValue = if (deviceType == DeviceType.MOBILE) 28f else 32f,
-        animationSpec = tween(durationMillis = 500),
-        label = ""
-    )
+    val fontSize = when(textType){
+        TextType.HEADING -> {
+            getHeadingSize(deviceType)
+        }
+        TextType.BUTTON -> {
+            getButtonTextSize(deviceType)
+        }
+        TextType.BODY -> {
+            getBodySize(deviceType)
+        }
+    }
 
 
     Text(
         modifier = modifier,
         text = title,
         fontFamily = font,
-        fontSize = fontSize.value.sp,
+        fontSize = fontSize,
         color = textColor
     )
 

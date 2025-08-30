@@ -10,4 +10,18 @@ object Constants {
             "\n" +
             "Beyond coding, I actively contribute to team discussions, mentor peers, and explore the latest advancements in Android development to stay ahead in the field."
 
+
+    const val EXPERIENCE = "Senior Android Developer — Accenture Pvt Ltd (2024 – Present)\n" +
+            "\n" +
+            "Led the development of 3+ large-scale Android apps using Kotlin, Jetpack Compose, and MVVM, improving delivery speed by 30%.\n" +
+            "\n" +
+            "Implemented modular architecture & clean code practices, reducing tech debt and improving scalability.\n" +
+            "\n" +
+            "Integrated Firebase, REST APIs, and GraphQL for seamless real-time experiences.\n" +
+            "\n" +
+            "Mentored junior developers and conducted code reviews, raising overall team quality."
+
+
+
+
 }

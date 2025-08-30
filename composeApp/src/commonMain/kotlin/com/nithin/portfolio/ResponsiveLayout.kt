@@ -9,6 +9,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.nithin.portfolio.components.AboutMeSection
+import com.nithin.portfolio.components.ExperienceSection
 import com.nithin.portfolio.components.HeaderSection
 import com.nithin.portfolio.components.ProjectSection
 import com.nithin.portfolio.utils.DeviceType
@@ -51,6 +52,13 @@ fun ResponsiveLayout(
         item {
             ProjectSection(
                 title = "Projects",
+                deviceType = deviceType
+            )
+        }
+
+        item {
+            ExperienceSection(
+                title = "Experience",
                 deviceType = deviceType
             )
         }
