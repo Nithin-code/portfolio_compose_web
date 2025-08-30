@@ -12,6 +12,7 @@ import com.nithin.portfolio.components.AboutMeSection
 import com.nithin.portfolio.components.ExperienceSection
 import com.nithin.portfolio.components.HeaderSection
 import com.nithin.portfolio.components.ProjectSection
+import com.nithin.portfolio.components.SkillsSession
 import com.nithin.portfolio.utils.DeviceType
 import com.nithin.portfolio.utils.SurfaceBackGround
 import com.nithin.portfolio.utils.getArrangementSpace
@@ -64,6 +65,12 @@ fun ResponsiveLayout(
         }
 
 
+        item {
+            SkillsSession(
+                title = "Skills",
+                deviceType = deviceType,
+            )
+        }
 
     }
 }

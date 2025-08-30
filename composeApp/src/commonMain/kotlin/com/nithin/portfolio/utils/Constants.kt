@@ -1,5 +1,7 @@
 package com.nithin.portfolio.utils
 
+import androidx.compose.material3.DatePickerState
+
 object Constants {
 
     const val aboutMeText = "I’m an Android Developer with 4+ years of experience building scalable, high-performance mobile applications.\n" +
@@ -23,5 +25,10 @@ object Constants {
 
 
 
+    val JOB_START = "01-05-2021"
+
+    val SIMPLE_DATE_FORMATE = "dd/mm/YYYY"
 
 }
+
+
